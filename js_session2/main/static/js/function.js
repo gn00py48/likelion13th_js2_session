@@ -17,19 +17,8 @@ const productList = document.getElementById("product_list");
 products.forEach((item) => {
     const card = document.createElement("div");
     card.className = "card";
-    if (item.stock === 0) {
-        card.classList.add("soldOut");
-    }
-    // 카드 콘텐츠 구성
-    card.innerHTML = `
-        <img src="${item.image}" alt="${item.name}" class="product_img" />
-        <div class="card_content">
-            <h3 class="product_name">${item.name}</h3>
-            <p class="product_price">가격: ${item.price}원</p>
-            <p class="product_stock">재고: ${item.stock === 0 ? "품절" : item.stock + "개"}</p>
-        </div>
-    `;
-    productList.appendChild(card);
+    // 상품 진열 카드를 구성하는 코드를 아래에 작성해 주세요!
+
 });
 
 
@@ -45,19 +34,7 @@ submitCommentBtn.addEventListener("click", () => {
     const commentText = commentInput.value.trim();
     if (!commentText) return alert("댓글을 입력해주세요!");
     // 이어서 함수를 작성해 주세요!
-    const commentDiv = document.createElement("div");
-    commentDiv.className = "comment_card";
-    commentDiv.innerHTML = `
-        <p class="comment_content">${commentText}</p>
-    `;
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "삭제";
-    deleteBtn.addEventListener("click", () => commentDiv.remove());
-
-    commentDiv.appendChild(deleteBtn);
-    commentList.appendChild(commentDiv);
-    commentInput.value = "";
+    
 });
 
 
@@ -69,16 +46,7 @@ const likeBtn = document.getElementById("likeBtn");
 let likeCount = 0;
 let isClicked = false;
 
-likeBtn.addEventListener("click", () => {
-    likeCount++;
-    likeBtn.textContent = `❤️ ${likeCount}`;
-
-    // 처음 클릭 시 배경색 설정
-    if (!isClicked) {
-        likeBtn.style.backgroundColor = "#FE7743";
-        isClicked = true;
-    }
-});
+// 뭐가 필요할까요오? 이어서 작성해 주세요!
 
 
 
